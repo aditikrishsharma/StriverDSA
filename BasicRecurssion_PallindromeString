@@ -1,0 +1,20 @@
+class Solution {   
+    public boolean palindromeCheck(String s , int i) {
+        //your code goes here
+        int n = s.length();
+        if(i >=n/2){
+            return true;
+        }
+        if(s.charAt(i) != s.charAt(n-i-1)){
+            return false;
+        }
+        return palindromeCheck(s , i + 1);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        Solution sol = new Solution();
+        boolean result = sol.palindromeCheck(str , 0);
+        System.out.print(result);
+    }
+}
