@@ -1,0 +1,26 @@
+class Solution {
+    public boolean isArmstrong(int n) {
+        int result = 0;
+        int temp = n ;
+    int ld = 0;
+    while(temp>0){
+        ld = temp%10;
+        result = result + (int)Math.pow(ld,3);
+        temp /= 10;
+    }
+    if(result == n){
+        return true;
+    }
+    else{
+        return false;
+    }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        Solution sol = new Solution();
+        boolean Armstrong = sol.isArmstrong(number);
+        System.out.println(Armstrong);
+
+    }
+}
