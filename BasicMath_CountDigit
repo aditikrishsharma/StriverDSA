@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Solution {
+    public int countDigit(int n) {
+ int count = 0;
+        while(n>0){
+            n = n/10;
+            count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        Solution sol = new Solution();
+        int result = sol.countDigit(number);
+        System.out.println(result);
+    }
+}
