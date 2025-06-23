@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class Solution {
+    public boolean isPalindrome(int n) {
+        int temp = n;
+         int reverse = 0;
+        while(temp>0){
+            reverse = reverse * 10 + (temp%10);
+            temp/=10;
+        }
+        if(reverse == n){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        Solution sol = new Solution();
+        boolean result = sol.isPalindrome(number);
+        System.out.println(result);
+    } 
+}
